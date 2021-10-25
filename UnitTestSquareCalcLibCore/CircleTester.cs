@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SquareCalcLib.Shapes;
+using SquareCalcLibCore.Shapes;
 using System;
 using System.Diagnostics;
 
