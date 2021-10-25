@@ -39,8 +39,8 @@ namespace SquareCalcLib.Shapes
 
 		public double CalculateSquare()
 		{
-			double p = (SideA + SideB + SideC)/2;
-			return Math.Sqrt(p * (p-SideA)*(p - SideB)*(p - SideC));
+			double p = (SideA + SideB + SideC) / 2;
+			return Math.Sqrt(p * (p-SideA) * (p - SideB) * (p - SideC));
 		}
 	}
 }
