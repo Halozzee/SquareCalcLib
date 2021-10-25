@@ -16,6 +16,8 @@
 
 ### Как воспользоваться?
 
+#### Создание фигуры
+
 Для того, чтобы создать свою фигуру, например Circle (окружность), площадь которой может быть посчитана необходимо выполнить перечисленные ниже пункты. Также, при создании
 фигуры следует учитывать особенности струтктуры проекта и "держать" все фигуры в директории `Shapes`. 
 
@@ -84,3 +86,43 @@
  ``` 
  
  Теперь фигура готова к работе. Чтобы протестировать ее необходимо вручную написать Unit-тесты.
+ 
+ #### Unit-тесты
+ 
+ Для написания Unit-тестов необходимо создать отдельный класс `{Название класса, который будет протестирован}Tester` в новом файле с соответствующим названием.
+ 
+ Ниже представлен пример готового Unit-теста для класса `Circle`:
+ 
+ ```
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SquareCalcLibCore.Shapes;
+using System;
+using System.Diagnostics;
+
+namespace SquareCalcLibUnitTest
+{
+	[TestClass]
+	public class CircleTester
+	{
+		[TestMethod]
+		public void TriangleTest1()
+		{
+			Circle t = new Circle(5);
+
+			double square = Math.PI * 25;
+
+			Assert.AreEqual(square, t.CalculateSquare());
+		}
+
+		[TestMethod]
+		public void TriangleTest2()
+		{
+			Circle t = new Circle(3);
+
+			double square = Math.PI * 9;
+
+			Assert.AreEqual(square, t.CalculateSquare());
+		}
+	}
+}
+ ```
